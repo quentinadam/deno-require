@@ -1,4 +1,4 @@
-import assert from 'jsr:@quentinadam/assert@^0.1.1';
+import assert from '@quentinadam/assert';
 
 export default function require<T>(value: T | undefined | null, error?: Error | string): T {
   assert(value !== undefined && value !== null, error);

@@ -1,9 +1,22 @@
 {
   "name": "@quentinadam/require",
   "version": "0.1.0",
-  "exports": "./mod.ts",
+  "license": "MIT",
+  "exports": "./require.ts",
+  "imports": {
+    "@quentinadam/assert": "jsr:@quentinadam/assert@^0.1.7"
+  },
+  "publish": {
+    "exclude": [
+      ".github/",
+      ".vscode/"
+    ]
+  },
   "fmt": {
     "singleQuote": true,
     "lineWidth": 120
+  },
+  "tasks": {
+    "check": "deno check **/*.ts"
   }
 }
