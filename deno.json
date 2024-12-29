@@ -1,31 +1,19 @@
 {
   "name": "@quentinadam/require",
   "version": "0.1.2",
+  "description": "A simple function that returns and requires that a value is not undefined or null",
   "license": "MIT",
   "exports": "./src/require.ts",
-  "publish": {
-    "include": [
-      "src",
-      "README.md"
-    ],
-    "exclude": [
-      "src/**/*.test.ts"
-    ]
-  },
   "imports": {
-    "@quentinadam/assert": "jsr:@quentinadam/assert@^0.1.9"
+    "@quentinadam/assert": "jsr:@quentinadam/assert@^0.1.10",
+    "typescript": "npm:typescript@^5.7.2"
   },
   "fmt": {
     "singleQuote": true,
     "lineWidth": 120
   },
-  "exclude": [
-    "dist"
-  ],
-  "tasks": {
-    "build": "rm -rf dist && tsc -b",
-    "check": "deno check src/**/*.ts",
-    "check-frozen": "deno check --frozen src/**/*.ts",
-    "check-version-numbers": "deno run --allow-read=. scripts/check-version-numbers.ts"
+  "compilerOptions": {
+    "noUncheckedIndexedAccess": true,
+    "noImplicitReturns": true
   }
 }
