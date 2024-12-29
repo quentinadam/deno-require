@@ -1,0 +1,32 @@
+{
+  "version": "4",
+  "specifiers": {
+    "jsr:@quentinadam/assert@~0.1.9": "0.1.9",
+    "npm:@quentinadam/assert@~0.1.9": "0.1.9",
+    "npm:typescript@^5.7.2": "5.7.2"
+  },
+  "jsr": {
+    "@quentinadam/assert@0.1.9": {
+      "integrity": "ea226a493fa9b429c235cd73657e701c797cd9907b414e8304319880b65d966b"
+    }
+  },
+  "npm": {
+    "@quentinadam/assert@0.1.9": {
+      "integrity": "sha512-LSITNbzbvq0WIOynjJTyyAfia5CsecyG8biOGOGGf6BP8TE2U4yaV0b4xE4dTUj16AqZrmfUesPwG/WJ5ccGnQ=="
+    },
+    "typescript@5.7.2": {
+      "integrity": "sha512-i5t66RHxDvVN40HfDd1PsEThGNnlMCMT3jMUuoh9/0TaqWevNontacunWyN02LA9/fIbEWlcHZcgTKb9QoaLfg=="
+    }
+  },
+  "workspace": {
+    "dependencies": [
+      "jsr:@quentinadam/assert@~0.1.9"
+    ],
+    "packageJson": {
+      "dependencies": [
+        "npm:@quentinadam/assert@~0.1.9",
+        "npm:typescript@^5.7.2"
+      ]
+    }
+  }
+}

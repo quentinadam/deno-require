@@ -1,33 +1,37 @@
 name: CI
-
 on:
   push:
     branches:
       - main
-
 jobs:
-  publish:
+  ci:
+    name: CI
     runs-on: ubuntu-latest
-    permissions:
-      contents: read
-      id-token: write    
     steps:
-      - name: Checkout repository
+      - name: Check out repository
         uses: actions/checkout@v4
-
       - name: Set up Deno
-        uses: denoland/setup-deno@v1
+        uses: denoland/setup-deno@v2
         with:
-          deno-version: v1.x
-
+          deno-version: v2.x
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22.x'
+          registry-url: 'https://registry.npmjs.org'
+      - name: Check version numbers
+        run: deno task check-version-numbers
       - name: Format
         run: deno fmt --check
-
       - name: Lint
         run: deno lint
-
-      - name: Check
-        run: deno task check
-
-      - name: Publish to JSR
-        run: deno publish
+      - name: Type-check
+        run: deno task check-frozen
+      - name: Install dependencies
+        run: deno install
+      - name: Build
+        run: deno task build
+      - name: Dry run publish to JSR
+        run: deno publish --dry-run
+      - name: Dry run publish to NPM
+        run: npm publish --dry-run

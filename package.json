@@ -1,0 +1,22 @@
+{
+  "name": "@quentinadam/require",
+  "version": "0.1.1",
+  "description": "A simple function that returns and requires that a value is not undefined or null",
+  "license": "MIT",
+  "author": "Quentin Adam",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/quentinadam/deno-require.git"
+  },
+  "type": "module",
+  "exports": "./dist/require.js",
+  "files": [
+    "dist"
+  ],
+  "dependencies": {
+    "@quentinadam/assert": "^0.1.9"
+  },
+  "devDependencies": {
+    "typescript": "^5.7.2"
+  }
+}

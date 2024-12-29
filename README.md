@@ -1,7 +1,6 @@
-# require
+# @quentinadam/require
 
-[![JSR](https://jsr.io/badges/@quentinadam/require)](https://jsr.io/@quentinadam/require)
-[![CI](https://github.com/quentinadam/deno-require/actions/workflows/ci.yml/badge.svg)](https://github.com/quentinadam/deno-require/actions/workflows/ci.yml)
+[![JSR][jsr-image]][jsr-url] [![NPM][npm-image]][npm-url] [![CI][ci-image]][ci-url]
 
 A simple function that returns and requires that a value is not undefined or null.
 
@@ -22,3 +21,10 @@ const value: string | undefined = 'hello';
 const narrowedValue = require(value); // narrows the type of value to string;
 value.toUpperCase(); // works
 ```
+
+[ci-image]: https://img.shields.io/github/actions/workflow/status/quentinadam/deno-require/ci.yml?branch=main&logo=github&style=flat-square
+[ci-url]: https://github.com/quentinadam/deno-require/actions/workflows/ci.yml
+[npm-image]: https://img.shields.io/npm/v/@quentinadam/require.svg?style=flat-square
+[npm-url]: https://npmjs.org/package/@quentinadam/require
+[jsr-image]: https://jsr.io/badges/@quentinadam/require?style=flat-square
+[jsr-url]: https://jsr.io/@quentinadam/require
